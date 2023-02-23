@@ -32,43 +32,43 @@ OFF_CMD = [3378, 1641, 439, 1242, 439, 398, 439, 398, 439, 398, 439, 398, 439, 3
            398, 439, 398, 439, 398, 439, 1242, 439, 1242, 439, 1242, 439, 1242, 439, 1242, 439, 1242, 439, 1242, 439, 1242,
            439]
 
-PREFIX = [3378, 1641]
+SIGNAL_PREFIX = [3378, 1641]
 BIT_ONE = [439, 1242]
 BIT_ZERO= [439, 398]
-SUFIX=[439,]
+SIGNAL_SUFIX=[439, ]
 
-SET_TEMP_BIT_PREF =[[1, 0, 0, 0, 0, 0, 0, 0],
-                    [0, 0, 0, 0, 1, 0, 0, 0],
-                    [0, 0, 0, 0, 0, 0, 0, 0],
-                    [0, 0, 0, 0, 0, 0, 1, 0],
-                    [1, 1, 1, 1, 1, 1, 0, 1],
-                    [1, 1, 1, 1, 1, 1, 1, 1],
-                    [0, 0, 0, 0, 0, 0, 0, 0],
-                    [0, 0, 1, 1, 0, 0, 1, 1],
-                    [1, 1, 0, 0, 1, 1, 0, 0],
-                    [0, 0, 0, 1, 1, 0, 0, 1],
-                    [1, 1, 1, 0, 0, 1, 1, 0],
-                    [0, 0, 1, 0, 0, 0, 1, 0],
-                    [1, 1, 0, 1, 1, 1, 0, 1],]
+SET_TEMP_BIT_PREFIX =[[1, 0, 0, 0, 0, 0, 0, 0],
+                      [0, 0, 0, 0, 1, 0, 0, 0],
+                      [0, 0, 0, 0, 0, 0, 0, 0],
+                      [0, 0, 0, 0, 0, 0, 1, 0],
+                      [1, 1, 1, 1, 1, 1, 0, 1],
+                      [1, 1, 1, 1, 1, 1, 1, 1],
+                      [0, 0, 0, 0, 0, 0, 0, 0],
+                      [0, 0, 1, 1, 0, 0, 1, 1],
+                      [1, 1, 0, 0, 1, 1, 0, 0],
+                      [0, 0, 0, 1, 1, 0, 0, 1],
+                      [1, 1, 1, 0, 0, 1, 1, 0],
+                      [0, 0, 1, 0, 0, 0, 1, 0],
+                      [1, 1, 0, 1, 1, 1, 0, 1], ]
 
-SET_TEMP_BIT_SUFIX = [[0, 0, 0, 0, 0, 0, 0, 0],
-                      [1, 1, 1, 1, 1, 1, 1, 1],
-                      [0, 0, 0, 0, 0, 0, 0, 0],
-                      [1, 1, 1, 1, 1, 1, 1, 1],
-                      [0, 0, 0, 0, 0, 0, 0, 0],
-                      [1, 1, 1, 1, 1, 1, 1, 1],
-                      [0, 0, 0, 0, 0, 0, 0, 0],
-                      [1, 1, 1, 1, 1, 1, 1, 1],
-                      [0, 0, 0, 0, 0, 0, 0, 0],
-                      [1, 1, 1, 1, 1, 1, 1, 1],
-                      [1, 0, 1, 0, 1, 0, 0, 0],
-                      [0, 1, 0, 1, 0, 1, 1, 1],
-                      [1, 0, 0, 0, 1, 0, 1, 1],
-                      [0, 1, 1, 1, 0, 1, 0, 0],
-                      [0, 0, 0, 0, 0, 0, 0, 0],
-                      [1, 1, 1, 1, 1, 1, 1, 1],
-                      [0, 0, 0, 0, 0, 0, 0, 0],
-                      [1, 1, 1, 1, 1, 1, 1, 1]]
+SET_TEMP_BIT_SUFFIX = [[0, 0, 0, 0, 0, 0, 0, 0],
+                       [1, 1, 1, 1, 1, 1, 1, 1],
+                       [0, 0, 0, 0, 0, 0, 0, 0],
+                       [1, 1, 1, 1, 1, 1, 1, 1],
+                       [0, 0, 0, 0, 0, 0, 0, 0],
+                       [1, 1, 1, 1, 1, 1, 1, 1],
+                       [0, 0, 0, 0, 0, 0, 0, 0],
+                       [1, 1, 1, 1, 1, 1, 1, 1],
+                       [0, 0, 0, 0, 0, 0, 0, 0],
+                       [1, 1, 1, 1, 1, 1, 1, 1],
+                       [1, 0, 1, 0, 1, 0, 0, 0],
+                       [0, 1, 0, 1, 0, 1, 1, 1],
+                       [1, 0, 0, 0, 1, 0, 1, 1],
+                       [0, 1, 1, 1, 0, 1, 0, 0],
+                       [0, 0, 0, 0, 0, 0, 0, 0],
+                       [1, 1, 1, 1, 1, 1, 1, 1],
+                       [0, 0, 0, 0, 0, 0, 0, 0],
+                       [1, 1, 1, 1, 1, 1, 1, 1]]
 
 
 def chunks(lst, n):
@@ -76,15 +76,17 @@ def chunks(lst, n):
     for i in range(0, len(lst), n):
         yield lst[i:i + n]
 
+
 def get_wave_from_bit_str(bit_string):
-    wave = PREFIX
+    wave = SIGNAL_PREFIX
     for bit in bit_string:
         if bit == '1':
             wave+=BIT_ONE
         else:
             wave+=BIT_ZERO
-    wave+=SUFIX
+    wave+=SIGNAL_SUFIX
     return wave
+
 
 def carrier(gpio, frequency, micros):
    """
@@ -103,6 +105,7 @@ def carrier(gpio, frequency, micros):
       wf.append(pigpio.pulse(1<<gpio, 0, on))
       wf.append(pigpio.pulse(0, 1<<gpio, off))
    return wf
+
 
 def send_command_to_ac(code):
     # create pi interface
@@ -148,6 +151,7 @@ def send_command_to_ac(code):
     for i in spaces_wid:
         pi.wave_delete(spaces_wid[i])
 
+
 def get_bit_codes_for_temp(temp):
     temp_bin = format(temp, '06b')
     temp_bin_str = ('00'+temp_bin[::-1])
@@ -156,11 +160,11 @@ def get_bit_codes_for_temp(temp):
 
 
 def get_set_temp_bit_command(temp):
-    set_temp_bit_command = SET_TEMP_BIT_PREF
+    set_temp_bit_command = SET_TEMP_BIT_PREFIX
     temperature_bit_code, inv_temperature_bit_code = get_bit_codes_for_temp(temp)
     set_temp_bit_command +=temperature_bit_code
     set_temp_bit_command += inv_temperature_bit_code
-    set_temp_bit_command +=SET_TEMP_BIT_SUFIX
+    set_temp_bit_command +=SET_TEMP_BIT_SUFFIX
     final_cmd =''
     for byte in set_temp_bit_command:
         for bit in byte:
@@ -181,8 +185,8 @@ def get_set_temp_bit_command(temp):
     # print i, int(''.join([str(x) for x in segment[::-1]]) ,2)
     # print(''.join(reversed(segments)))
 
-cmd_27 = get_wave_from_bit_str(get_set_temp_bit_command(27))
-send_command_to_ac(cmd_27)
+cmd = get_wave_from_bit_str(get_set_temp_bit_command(20))
+send_command_to_ac(cmd)
 # time.sleep(3)
 
 # send_command_to_ac(OFF_CMD)
